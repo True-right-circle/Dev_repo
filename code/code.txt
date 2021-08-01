@@ -1,5 +1,7 @@
 #---------------------#
 code folder
 work on Clone
+<<<<<<< HEAD
 new clone
+work on master
 #---------------------#
