@@ -1,3 +1,5 @@
 #---------------------#
 code folder
+
+*VSCode -> Terminal : dotnet new console
 #---------------------#

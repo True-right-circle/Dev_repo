@@ -1,0 +1,15 @@
+/Users/jin/Desktop/src/bin/Debug/net5.0/src.deps.json
+/Users/jin/Desktop/src/bin/Debug/net5.0/src.runtimeconfig.json
+/Users/jin/Desktop/src/bin/Debug/net5.0/src.runtimeconfig.dev.json
+/Users/jin/Desktop/src/bin/Debug/net5.0/src.dll
+/Users/jin/Desktop/src/bin/Debug/net5.0/ref/src.dll
+/Users/jin/Desktop/src/bin/Debug/net5.0/src.pdb
+/Users/jin/Desktop/src/obj/Debug/net5.0/src.csprojAssemblyReference.cache
+/Users/jin/Desktop/src/obj/Debug/net5.0/src.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jin/Desktop/src/obj/Debug/net5.0/src.AssemblyInfoInputs.cache
+/Users/jin/Desktop/src/obj/Debug/net5.0/src.AssemblyInfo.cs
+/Users/jin/Desktop/src/obj/Debug/net5.0/src.csproj.CoreCompileInputs.cache
+/Users/jin/Desktop/src/obj/Debug/net5.0/src.dll
+/Users/jin/Desktop/src/obj/Debug/net5.0/ref/src.dll
+/Users/jin/Desktop/src/obj/Debug/net5.0/src.pdb
+/Users/jin/Desktop/src/obj/Debug/net5.0/src.genruntimeconfig.cache
