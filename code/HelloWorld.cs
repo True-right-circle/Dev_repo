@@ -13,7 +13,7 @@ namespace src
         //ex 문명 게임에서 간디의 공격성은  byte로 지정되어있었고
         //특정 조건에서 공격성이 내려갔는데 0에서 --처리가 되어서
         //언더 플로우가 발생하여 255가 되어 매우 공격적으로 변하는 버그가 있었음
-
+	//Clone Test
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
