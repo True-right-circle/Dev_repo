@@ -1,5 +1,6 @@
 #---------------------#
-code folder
-
+C# basic study folder
 *VSCode -> Terminal : dotnet new console
+
+
 #---------------------#

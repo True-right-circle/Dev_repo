@@ -4,6 +4,14 @@ namespace src
 {
     class Program
     {
+        //열거법
+        enum Choice
+        {
+            rock,
+            paper,
+            scissors
+        }
+
         //1. Main 함수는 프로젝트 내에서 유일해야한다.
         //byte(1바이트 0~255) short(2byte -3만 ~ 3만) int(4byte -21억 ~ 21얼), long(8byte)
         //sbyte -> (-128 ~ 127), usort(2byte 0~ 6만 5천) uint(0~43djr) ulong 
@@ -56,7 +64,7 @@ namespace src
         //string char의 집합체
         string str = "abcd";
 
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             //형변환
             // 1. 범위가 다른 경우 ex) int(4byte) -> short(2byte) : 명시적 형변환은 가능(캐스팅)
@@ -112,6 +120,25 @@ namespace src
             // 9. | ....
 
             //var 키워드 -> 남용하지 않는게 좋다 명시적으로 표현하는게 가독성에 좋다.
-        }
+
+            //삼항 연산자 조건 ? 참일 떄의 값 : 거짓일 떄의 값
+            //aid가 1보다 큰게 참이면 50 아니면 100 반환
+            int three = aid>1? 50 : 100;
+
+            //상수 const -> 한번 설정한 이후에는 값을 바꾸지 않겠다
+            const int cint = 3;
+            //cint =4; -> error
+
+            //열거형
+            Choice enuma = Choice.paper;
+            
+            //switch문에 하드코딩된 숫자를 넣지말자
+            //break -> 소속된 반복문 또는 switch문을 빠져나간다.
+            //continue 반복문에서 아래부분을 실행하지 않고 다음 루프로 넘어간다.
+
+            //함수에서 복사와 참조
+            //매개변수로 일반 데이터 타입을 전달하면 값이 복사가 되어 아예 다른 메모리상의 값이 전달된다.
+            //매개변수 앞에 ref값을 넣어야 넘겨받는 값의 주소를 참조하여 해당 값에 직접 접근한다.
+        }*/
     }
 }
