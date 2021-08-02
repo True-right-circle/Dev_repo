@@ -7,12 +7,12 @@ namespace src
         //매개변수 ref
         static void AddOne(ref int number)
         {
-            number +=1;
+            number += 1;
         }
 
-        static int AddOne2( int number)
+        static int AddOne2(int number)
         {
-            return number +=1;
+            return number += 1;
         }
 
         //swap 예시
@@ -21,24 +21,24 @@ namespace src
         //1.복사한 값끼리 교체를 한 것 이기 때문에 원본값은 교환이 일어나지 않음
         static void swap1(int a, int b)
         {
-            int temp =a;
-            a =b;
+            int temp = a;
+            a = b;
             b = temp;
 
         }
         //2.원본값을 참조하여 접근하였기 때문에 원본값이 바뀜
         static void swap2(ref int a, ref int b)
         {
-            int temp =a;
-            a =b;
+            int temp = a;
+            a = b;
             b = temp;
         }
 
         //out 키워드 -> 반환하고 싶은 값이 여러개일 때 사용
         static public void Calcul(int a, int b, out int result1, out int result2)
         {
-            result1 = a/b;
-            result2 = a%b;
+            result1 = a / b;
+            result2 = a % b;
         }
 
         static public void organize()
@@ -49,21 +49,21 @@ namespace src
             AddOne(ref a);
             //원본값은 변하지 않고 복사하여 값을 반환하는것이기 때문에 원본값이 변하면 안될 때 사용하자
             int b = AddOne2(a);
-             Console.WriteLine("ref\n" + a+"\n"+b);
+            Console.WriteLine("ref\n" + a + "\n" + b);
 
-            swap1(a,b);
-            Console.WriteLine("ref\n" + a+"\n"+b);
-             
+            swap1(a, b);
+            Console.WriteLine("ref\n" + a + "\n" + b);
+
             swap2(ref a, ref b);
-            Console.WriteLine("ref\n" + a+"\n"+b);
-             
+            Console.WriteLine("ref\n" + a + "\n" + b);
+
             Console.WriteLine("ref\n" + a);
 
             int reusult1 = 0;
             int result2 = 0;
             //out도 참조의 개념이기 때문에 out 키워드가 필요하다
-            Calcul(10,3,out reusult1, out result2);
-             Console.WriteLine("out\n" + reusult1 +"\n"+result2);
+            Calcul(10, 3, out reusult1, out result2);
+            Console.WriteLine("out\n" + reusult1 + "\n" + result2);
         }
     }
 }

@@ -42,7 +42,7 @@ namespace src
         //빠르게 음수를 찾기 쉽다.
         //00110100 -> 52 -> 0과 1을 반전 시킨다 -> 11001011 -> 1을 더한다 -> 11001100 -> -52
         //8개의 비트가 모여 1byte가된다.
-        
+
 
         //bool type ->참 혹은 거짓 1 or 0 값을 가진다.
         //컴퓨터가 연산시 1비트보다 1byte가 더 빠르기 때문에 bool은 1바이트의 크기를 갖는다.
@@ -51,7 +51,7 @@ namespace src
         // 소수 float, double 등
         // 크기는 정수와 비슷하지만 연산은 정수 연산보다 비싸다
         // float -> 4바이트, double 8바이트 -> 범위도 더크고 정밀하게 표현 가능
-        float f =3.14f; //7자리까지는 정밀하고 그 이상은 오차가 생긴다.
+        float f = 3.14f; //7자리까지는 정밀하고 그 이상은 오차가 생긴다.
         double d = 3.14;
 
         // 문자, 문자열
@@ -68,7 +68,7 @@ namespace src
         {
             //형변환
             // 1. 범위가 다른 경우 ex) int(4byte) -> short(2byte) : 명시적 형변환은 가능(캐스팅)
-            int a =1000;
+            int a = 1000;
             short sh = (short)a; //int가 값이 더 크기 떄문에 값에 따라 결과물 소실이 일어난다
             //-> 반대의 경우는 문제가 없다 short -> int로 형변환
             // 2. 범위는 같거나 비슷하나 부호가 다를경우
@@ -81,14 +81,14 @@ namespace src
             //hp++은 호출되는 라인 이후부터 101로 증가하며 ++hp는 호출되는 라인부터 101로 시작한다.
             hp++;
             ++hp;
-            
+
             //비트 연산 :<< >> &(and) |(or) ^(xor) ~(not)
-            int num =1;
+            int num = 1;
             num = num << 1;
             // 1-> 0000 0001 -> 왼쪽으로 1칸 이동하라 -> 0000 0010 :2
-            num =1;
+            num = 1;
             num = num << 3; //왼쪽으로 3칸 이동하라 ->  0000 1000
-            num = num >>1; //오른쪽으로 1칸 이동하라 -> 0000 0100
+            num = num >> 1; //오른쪽으로 1칸 이동하라 -> 0000 0100
             //주의 1000 01000 0000 00010 일경우(부호를 갖을 경우) 옮기고 맨왼쪽을 1로 바꿔주기 때문에 값이
             //이상해 질 수 있어 uint등 usinged 타입으로 사용하는것이 좋다
 
@@ -103,8 +103,8 @@ namespace src
             int id = 123;
             int key = 401;
 
-            int aid = id^key; // 암호화가 된다.
-            int bid = aid^key; // 다시 123이 된다.
+            int aid = id ^ key; // 암호화가 된다.
+            int bid = aid ^ key; // 다시 123이 된다.
 
             Console.WriteLine(num);
             //Console.WriteLine("Hello World!");
@@ -123,7 +123,7 @@ namespace src
 
             //삼항 연산자 조건 ? 참일 떄의 값 : 거짓일 떄의 값
             //aid가 1보다 큰게 참이면 50 아니면 100 반환
-            int three = aid>1? 50 : 100;
+            int three = aid > 1 ? 50 : 100;
 
             //상수 const -> 한번 설정한 이후에는 값을 바꾸지 않겠다
             const int cint = 3;
@@ -131,7 +131,7 @@ namespace src
 
             //열거형
             Choice enuma = Choice.paper;
-            
+
             //switch문에 하드코딩된 숫자를 넣지말자
             //break -> 소속된 반복문 또는 switch문을 빠져나간다.
             //continue 반복문에서 아래부분을 실행하지 않고 다음 루프로 넘어간다.

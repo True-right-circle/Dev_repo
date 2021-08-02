@@ -6,7 +6,7 @@ namespace src
     {
         static void Main(string[] args)
         {
-                refout.organize();
+                
         }
     }
 }
