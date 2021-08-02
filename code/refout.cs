@@ -35,12 +35,13 @@ namespace src
         }
 
         //out 키워드 -> 반환하고 싶은 값이 여러개일 때 사용
-        static void Calcul(int a, int b, out int result1, out int result2)
+        static public void Calcul(int a, int b, out int result1, out int result2)
         {
             result1 = a/b;
             result2 = a%b;
         }
-         static void Main(string[] args)
+
+        static public void organize()
         {
             int a = 0;
             //매개변수 ref -> 값을 복사하는것이 아닌 전달하는 인자의 주소를 참조하여 값에 접근한다

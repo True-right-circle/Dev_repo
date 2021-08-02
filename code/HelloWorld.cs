@@ -64,7 +64,7 @@ namespace src
         //string char의 집합체
         string str = "abcd";
 
-        /*static void Main(string[] args)
+        static void organize()
         {
             //형변환
             // 1. 범위가 다른 경우 ex) int(4byte) -> short(2byte) : 명시적 형변환은 가능(캐스팅)
@@ -139,6 +139,6 @@ namespace src
             //함수에서 복사와 참조
             //매개변수로 일반 데이터 타입을 전달하면 값이 복사가 되어 아예 다른 메모리상의 값이 전달된다.
             //매개변수 앞에 ref값을 넣어야 넘겨받는 값의 주소를 참조하여 해당 값에 직접 접근한다.
-        }*/
+        }
     }
 }

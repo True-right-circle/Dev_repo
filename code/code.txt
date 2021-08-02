@@ -1,6 +1,18 @@
 #---------------------#
 C# basic study folder
 *VSCode -> Terminal : dotnet new console
+*VScode 라인 정렬 -> command K + F
+
+Debugging
+
+Set break point -> F9
+F10 -> Debugging one line -> 메소드가 있을경우 메소드 과정을 보여주지 않고 결과를 바로 보여줌
+F11 -> 메소드가 존재할 경우 해당 메소드로 들어가 과정을 디버깅
 
 
+# Homework 1. 간단한 텍스트 RPG만들기
+*반복문, 분기문, ref, out, 구조체등 활용
+1. 케릭터 생성 - 직업, 직업별 체력 공격력
+2. 몬스터 생성 - 몬스터 타입별 체력 공격력
+3. 전투 - 턴제 
 #---------------------#
