@@ -31,3 +31,59 @@ Knigt k = new Knigt(); -> 객체를 생성
 //생성한 객체의 속성 할당 및 기능 수행
 k.hp =100;
 k.move();
+
+
+/-----------------------------------------------------/
+value and reference 얕은복사 깊은복사
+
+stuct vs class
+-> stuct는 복사를 하는것이고 class는 참조를 하는것이다
+함수에 인자로 넘길 경우
+class는 참조를 하기 떄문에 본체(?)의 값에 변화를 주면 값이 변하고
+struct는 복사를 하기 때문에 본체의 값에 영향을 주지 않는다.
+
+Test code
+
+struct Maage
+{
+    hp
+}
+
+class Knight
+{
+    hp
+}
+
+Mage mage1;
+mage.hp = 100;
+
+Mage mage2=mage1;
+mage.hp = 50;
+-------------------> mage2 = mage1는 복사가 일어나 hp는 각각 100,50으로 서로 다른 객체이다.
+
+Knight k1;
+k1.hp = 100;
+
+Knight k2 = k1;
+k2.hp = 50;
+-------------------> k2는 k1을 참조하기 때문에 k1의 hp를 바꿔버려 50이 되어 버린다.
+별도의 Knight를 하려면
+Knight k2 = new k2();로 생성해야한다.
+
+*Deep Copy
+클래스에 해당 오브젝트를 반환하는 객체를 만들어분다
+public Knight Clone()
+{
+    Knight k = new k();
+    k.hp = hp;
+    reutun k;
+}
+->
+Knight k1;
+k1.hp = 100;
+
+Knight k2 = k1.Clone();
+k2.hp = 50;
+-------------------> k1과 같은 값을 같는 새로운 객체를 Clone한 값이 새로 k2에 할당 되기 때문에
+복사가 일어나 각각 별개의 오브젝트가 된다.
+/-----------------------------------------------------/
