@@ -26,3 +26,8 @@ class Knigt
 
     }
 }
+
+Knigt k = new Knigt(); -> 객체를 생성
+//생성한 객체의 속성 할당 및 기능 수행
+k.hp =100;
+k.move();

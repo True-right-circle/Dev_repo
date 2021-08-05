@@ -6,11 +6,6 @@ namespace src
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
-                //Input
-                Console.Write(" ->");
-            }
         }
     }
 }
