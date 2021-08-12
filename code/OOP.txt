@@ -165,3 +165,50 @@ static public Knight CreateKnight()
 static으로 선언된 함수는 Knight 클래스에 종속적이기 때문에
 new를 사용하여 객체를 만들 필요없이 바로 Knight.CreateKnight()와 같이 바로 호출 할 수 있다.
 클래스가 아닌 객체에 종속된 함수들은 객체를 생성하여 호출 해야한다.
+
+*객체지향(OOP)를 나타내는 3대 속성 : 은닉성 상속성 다형성
+*상속성
+매번 클래스를 생성해서 데이터를 관리하는것은 비효율적이니 상속을 활용하자
+
+부모클래스는 파생 클래스들이 공통적으로 묶을 수 있는 공통적인 클래스로 한다
+
+class Player //부모 클래스
+{
+    int ex;
+    public Player()
+    {
+
+    } 
+    public Player(int hp)
+    {
+        this.hp = hp;
+    }
+
+    public void Move()
+    {
+        //Player Move
+    }
+}
+
+class Knight : Player -> 상속 : 파생 클래스 or 자식 클래스
+{
+    Knight() : base(100) -> 부모 클래스의 매개변수 int를 받는 생성자를 호출한다
+    {
+        =>생성자
+        base.ex = 10; -> 상위 클래스의 변수에 접근 할 수 있다/.
+        //Knight 객체를 생성했을 때 상위 클래스의 Player의 생성자가 우선 호출 되고 자식 클래스의 생성자가 호출 된다.
+    }
+}
+
+class Mage : Player
+{
+
+}
+
+main()
+{
+    Knight k = new Knight()
+    k.move() -> 호출가능 : 상속을 받으면 상위 클래스의 함수까지 사용이 가능하다.
+}
+
+*은닉성
