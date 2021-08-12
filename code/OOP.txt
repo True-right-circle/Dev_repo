@@ -316,19 +316,64 @@ main()
     EnterGamePlayer(m)
 }
 
+
+* 다형성
 class Player
 {
     protected int hp;
     protected int attack;
     
+    //기본적인 이동이지만
+    //Player를 상속받은 Knight와 Mage의 각각 이동 내용은 다를 수있다.
+    //Knight는 승마, Mage는 날기
+
+    //부모 클래스의 Move에 virtual 키워드가 있으면 재정의를 해야한다는 뜻 -> 자식 클래스에서는 override로
+    //오버 로딩과 헷갈리지 마라 : 오버로딩 : 함수 명이 같으나 매개변수나 인자가 다른 함수
+    //오버라이딩 : 다형성을 이용한 코드 재정의
+    //오버라이딩이 없는 함수의 경우 부모 클래스의 함수가 호출 된다.
+    public void Move()
+    {
+        //걷기
+    }
+
 }
 
 class Knight : Player
 {
+    public override void Move() //override-> 재정의 : 부모 클래스의 함수를 상속 받았으나
+    //부모클래스가 virtual이 아니면 override사용 시 에러가 나온다
+    //자식의 자식도 override가 가능하다
+    //같은 동작이지만 다른내용의 동작을 하기위해 재정의를한다. : 함수명은 같으나 내용이 다른
+    {
+        //나의 move도 호출하지만 부모의 Move도 실행 하고 싶으면 base.Move()로 호출한다.
+        base.Move();
+        //승마하기
+    }
+    *sealed 키워드 : override시 sealed키워드가 붙으면 현재의 클래스까지는 해당 함수를 재정의가 가능하지만
+    자식의 자식 클래스는 재정의가 불가능하도록 하는 키워드
+    public sealed override Move()
+    {
 
+    }
 }
 
 class Mage : Player
 {
     public int mp;
+    public override void Move()
+    {
+        //날기
+    }
 }
+
+main()
+{
+    Player p = new Player();
+    Knight k = new Knight();
+    Maage m = new Maage();
+    p.move() -> 걷기
+    k.move() -> 승마
+    m.move() -> 날기
+}
+
+*virtual을 사용할 시 일반 함수보다 비용이 더 들어가니 적절히 사용하자.
