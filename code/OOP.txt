@@ -220,7 +220,7 @@ main()
 class Knight
 {
     //default는 private이다
-    
+
     //함부로 고치면 안되는 정보는 public은 위험하다
     public int hp; -> public : 모두에게 공개하는 필드값
     public void Move();
@@ -245,4 +245,90 @@ class Knight
 
    protected -> 외부 접근 불가, 상속을 받은 클래스에서는 접근 가능
      
+}
+
+
+* 클래스 형식변환
+상속의 최장점 : 코드의 재사용성
+
+class Player
+{
+    protected int hp;
+    protected int attack;
+    
+}
+
+class Knight : Player
+{
+
+}
+
+class Mage : Player
+{
+    public int mp;
+}
+
+void EnterGame(Knight k)
+{
+
+}
+vodi EnterGame(Mage m)
+{
+
+}
+vodi EnterGamePlayer(Player m)
+{
+    bool isMage = (m is Mage);
+    if(isMage)
+    {
+        //mp로 접근가능
+    }
+
+    //또는 * is 보다는 as를 활용하자
+    Mage mage = (m as Mage) //m이 Mage인지 체크하여 형변환(캐스팅까지) Mage가 아닐시 Null
+    if(mage != null)
+    {
+        //mp 접근 가능
+    }
+}
+
+main()
+{
+    //k는 스택에 생성되며 new Knight는 힙 메모리에 본체가 올라가며
+    //k는 본체의 주소를 가지고 본체의 값에 접근을하여 값을 수정하거나 읽는다. 
+
+    Knight k = new Knight();
+    Mage m = new Mage();
+
+    //각각 객체를 EnterGame에 넘겨주려면 해당 매개변수를 받는 메서드를 호출해야한다
+    //이렇게 할 시 코드의 중복과 반복이 일어나며 비효율적이다.
+   
+    EnterGame(k) //EnterGame(Knight k)
+    EnterGame(m) //EnterGame(Mage m)
+
+    //두 클래스 공통적으로 받는 부모 타입으로 받으면 둘다 넘겨 줄 수있다.
+    //그러나 Mage클래스에만 있는 mp라는 속성값은 Mage만 갖기 때문에 해당 함수에서 접근 할 수 있는 방법이 없다.
+    //때문에 강제 형변환으로 접근이 가능하나 넘겨준 매개변수가 Mage가 아닌걸 강제 형변환 했을 시 mp에 접근했을 때
+    //crash가 난다.
+    //자식->부모로 형변환은 큰 문제가 없으나 부모 -> 자식 클래스로 형변환 했을시 위와 같은 crash 위험이 있고 위험하다.
+    //is 체크등 if문으로 필터를 거쳐 접근하다록하여 방어할 순 있다.
+    EnterGamePlayer(k)
+    EnterGamePlayer(m)
+}
+
+class Player
+{
+    protected int hp;
+    protected int attack;
+    
+}
+
+class Knight : Player
+{
+
+}
+
+class Mage : Player
+{
+    public int mp;
 }
