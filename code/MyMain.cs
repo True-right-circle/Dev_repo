@@ -9,6 +9,8 @@ namespace src
             //Array part
             //MyArray mA = new MyArray();
             //mA.SetMyArray();
+            MyBubble mb = new MyBubble();
+            mb.BubbleFunc();
         }
     }
 }
