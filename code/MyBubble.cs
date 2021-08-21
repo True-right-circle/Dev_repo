@@ -63,6 +63,7 @@ class MyBubble
             //이후 for문으로 돌아가 다음 인덱스로 나머지 배열 순회 위의 내용 반복
         }
 
+        //출력
         foreach(int n in arrays)
         {
             Console.Write(n+", ");
