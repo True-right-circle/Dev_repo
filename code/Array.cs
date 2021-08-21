@@ -45,6 +45,16 @@ class MyArray
         Console.Write("\n\n");
         Sort(exScores);
 
+        //2차원 배열
+        int[,] dArray = new int[5, 5]{{1,2,3,4,5},
+        {1,2,3,4,5},
+        {1,2,3,4,5},
+        {1,2,3,4,5},
+        {1,2,3,4,5}};
+
+        int[][] cArray = new int[3][];
+        cArray[0] = new int[10]; // -> 두번쨰 배열은 비워놓고 상황에 따라 가변처럼 사용할 수 있다.
+
     }
 
     static int GetHighestScore(int[] scores)
@@ -110,7 +120,7 @@ class MyArray
             Console.Write(n+"\n");
         }
     }
-
+    //ssh로 변경
 
 }
 

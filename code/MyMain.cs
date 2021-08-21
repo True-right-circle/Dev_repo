@@ -7,8 +7,8 @@ namespace src
         static void Main(string[] args)
         {
             //Array part
-            MyArray mA = new MyArray();
-            mA.SetMyArray();
+            //MyArray mA = new MyArray();
+            //mA.SetMyArray();
         }
     }
 }
